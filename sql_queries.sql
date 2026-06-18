@@ -120,7 +120,11 @@ GROUP BY 1
 ORDER BY 2 DESC
 LIMIT 5;
 
-
+SELECT 
+    category,    
+    COUNT(DISTINCT customer_id) as cnt_unique_cs
+FROM retail_sale
+GROUP BY category;
 
 WITH hourly_sale AS
 (
